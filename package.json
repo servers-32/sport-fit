@@ -1,0 +1,20 @@
+{
+  "name": "sportfit-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --config vite.config.iife.js && node scripts/sync-sportfit-app.mjs",
+    "preview": "vite preview",
+    "stripe-server": "node server/stripe-server.mjs",
+    "seo:prod": "node scripts/seo-check.mjs --base https://sportfit-badhersfeld.de --min-score 90",
+    "seo:local": "node scripts/seo-check.mjs --base http://127.0.0.1:4173 --min-score 90 --skip-endpoint-check"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.14"
+  }
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Private/runtime endpoints
+Disallow: /server/
+Disallow: /node_modules/
+
+Sitemap: https://sportfit-badhersfeld.de/sitemap.xml
